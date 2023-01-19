@@ -16,3 +16,13 @@ std::vector<std::string> split_string(std::string str, std::string delimiter = "
     output.push_back(str.substr(start, end - start));
     return output;
 }
+
+template <class T>
+void print_vector(std::vector<T> v)
+{
+    for (auto s : v)
+    {
+        std::cout << s << ", ";
+    }
+    std::cout << std::endl;
+}
