@@ -18,6 +18,12 @@ std::vector<std::string> split_string(std::string str, std::string delimiter = "
 }
 
 template <class T>
+void print_line(T v)
+{
+    std::cout << v << std::endl;
+}
+
+template <class T>
 void print_vector(std::vector<T> v)
 {
     for (auto s : v)
