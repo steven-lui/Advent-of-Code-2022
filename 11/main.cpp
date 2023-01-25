@@ -60,24 +60,14 @@ int main()
     // PART TWO: LCM
     int mod = 1;
     for (int m = 0; m < group_size; m++)
-    {
         mod *= monkeys[m].test_value;
-    }
-
     for (int m = 0; m < group_size; m++)
-    {
         monkeys[m].modulo = mod;
-    }
 
     // RUN SIMULATION
     for (int r = 0; r < rounds; r++)
-    {
-        // simulate a round
         for (int m = 0; m < group_size; m++)
-        {
             monkeys[m].simulate();
-        }
-    }
 
     // MONKEY BUSINESS
     int count[group_size];

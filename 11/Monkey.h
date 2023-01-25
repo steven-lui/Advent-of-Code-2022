@@ -54,19 +54,7 @@ private:
     int inspect(int old_worry)
     {
         int64_t operand = (worry_operation.second == "old") ? old_worry : stoi(worry_operation.second);
-        int64_t output;
-
-        // cant seem to stop (operand * old_worry) > int_max
-        if (worry_operation.first == "*")
-            output = operand * old_worry;
-        else
-            output = operand + old_worry;
-
-        if (output < 0)
-        {
-            std::cout << operand << worry_operation.first << old_worry << "=" << output << std::endl;
-        }
-
+        int64_t output = (worry_operation.first == "*") ? (operand * old_worry) : (operand + old_worry);
         return output % modulo;
     }
 };
